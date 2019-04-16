@@ -50,7 +50,8 @@ const getSessionToken = (profile, creds, token) => {
       return {
         aws_access_key_id: AccessKeyId,
         aws_secret_access_key: SecretAccessKey,
-        aws_session_token: SessionToken
+        aws_session_token: SessionToken,
+        aws_security_token: SessionToken, // workaround for boto/boto#2988
       };
     });
 };
